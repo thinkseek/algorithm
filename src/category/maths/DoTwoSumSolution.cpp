@@ -22,14 +22,12 @@
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
 
-来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/two-sum
 */
 #include <iostream>
 #include <vector>
-using namespace std;
 
-class TwoSumSolution
+class DoTwoSumSolution
 {
 public:
     vector<int> twoSum(vector<int> & nums, int target) {
@@ -50,19 +48,3 @@ public:
         return vc;
     }
 };
-
-int main()
-{
-    vector<int> nums = {2, 7, 11, 15};
-    int target = 9;
-    TwoSumSolution ts;
-    vector<int> ret = ts.twoSum(nums, target);
-    std::cout << '[';
-    for (int i = 0; i < ret.size(); ++i) {
-        std::cout << ret[i];
-        if(i != ret.size() - 1) {
-            std::cout << ",";
-        }
-    }
-    std::cout << ']';
-}
