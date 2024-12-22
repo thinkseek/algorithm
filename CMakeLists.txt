@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 # 指定题目文件
 set(TwoSumSolution src/category/maths/DoTwoSumSolution.cpp
+        src/category/arrays/DoThreeSumSolution.cpp
 )
 add_executable(TwoSumSolution ${TwoSumSolution})
 
