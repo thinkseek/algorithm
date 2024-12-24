@@ -26,6 +26,7 @@ s 由英文字母、数字、符号和空格组成
 */
 #include <string>
 #include <unordered_set>
+using namespace std;
 #include "DoMaxNoDuplicateStringsSolution.h"
 
 // 实现
@@ -39,12 +40,12 @@ int DoMaxNoDuplicateStringsSolution::lengthOfLongestSubstring(std::string input)
 
     // 1、工具字段（使用start/end双指针滑动窗口）
     int start = 0; //起始指针
-    std::unordered_set<char> char_set; //记录字符串的字符，用来判断是否重复
+    unordered_set<char> char_set; //记录字符串的字符，用来判断是否重复
 
     // 记录字段
     int max_start = 0; //子串起始位置
     int max_length = 0; //最长子串长度
-    std::string max_substr = ""; //最大子串长度
+    string max_substr = ""; //最大子串长度
 
     // 2、执行滑动分析，从头开始滑动 end 作为滑动指针
     for(int end=0; end<input.length(); ++end) {
@@ -65,7 +66,7 @@ int DoMaxNoDuplicateStringsSolution::lengthOfLongestSubstring(std::string input)
         }
     }
 
-    std::cout << "字符串长度：" << max_length << " 字符串：" << max_substr << std::endl;
+    cout << "字符串长度：" << max_length << " 字符串：" << max_substr << endl;
     return max_length;
 }
 

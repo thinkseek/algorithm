@@ -3,6 +3,7 @@
 //
 #include <string>
 #include <iostream>
+using namespace std;
 
 #ifndef ALGORITHM_DOMAXNODUPLICATESTRINGSSOLUTION_H
 #define ALGORITHM_DOMAXNODUPLICATESTRINGSSOLUTION_H

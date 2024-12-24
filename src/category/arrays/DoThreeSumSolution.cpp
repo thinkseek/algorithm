@@ -31,6 +31,7 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 */
 #include <vector>
 #include <algorithm>
+using namespace std;
 
 class DoThreeSumSolution {
 public:
