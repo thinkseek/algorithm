@@ -22,10 +22,14 @@ l1 和 l2 均按 非递减顺序 排列
 */
 
 
-// std11+ 可以直接通过std::list使用链表特性；提交题目需要自定义 Definition for singly-linked list.
+// std11+ 可以直接通过std::list使用链表特性；提交题目需要自定义
+// 定义一个单链表节点 data,next
 struct ListNode {
+    // 数据结构
     int val;
     ListNode *next;
+
+    // init
     ListNode() : val(0), next(nullptr) {}
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
@@ -35,10 +39,10 @@ class DoMergeTwoListsSolution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         // 创建一个空节点
-        ListNode dummy(0);
-        ListNode* current_node = &dummy;
+        ListNode empty_node(0);
 
-        // 遍历两个链表
+        // 遍历两个链表，判断值大小，写入新链表节点
+        ListNode* current_node = &empty_node;
         while(list1 != nullptr && list2 != nullptr) {
             if(list1->val <= list2->val) {
                 current_node->next = list1;
@@ -54,6 +58,6 @@ public:
         // 追加比较超出的部分
         current_node->next = (list1 != nullptr) ? list1 : list2;
         // 返回merge后的链表
-        return dummy.next;
+        return empty_node.next;
     }
 };
