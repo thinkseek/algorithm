@@ -8,8 +8,3 @@ set(TwoSumSolution src/category/hash-table/DoTwoSumSolution.cpp
         src/category/linked-list/DoMergeTwoListsSolution.cpp
 )
 add_executable(TwoSumSolution ${TwoSumSolution})
-
-#set(DoMaxNoDuplicateStringsSolution src/category/strings/DoMaxNoDuplicateStringsSolution.cpp
-#        src/category/strings/DoMaxNoDuplicateStringsSolution.h
-#        src/category/main.cpp)
-#add_executable(DoMaxNoDuplicateStringsSolution ${DoMaxNoDuplicateStringsSolution})
