@@ -1,6 +1,6 @@
 /**
- * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长
-子串的长度。
+ * 3. 无重复字符的最长子串
+给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串的长度。
 
 示例 1:
 输入: s = "abcabcbb"
@@ -69,4 +69,3 @@ int DoMaxNoDuplicateStringsSolution::lengthOfLongestSubstring(std::string input)
     cout << "字符串长度：" << max_length << " 字符串：" << max_substr << endl;
     return max_length;
 }
-

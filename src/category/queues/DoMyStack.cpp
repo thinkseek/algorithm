@@ -1,6 +1,6 @@
 /**
- * 用队列实现栈
- * 请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）。
+ * 225. 用队列实现栈
+请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）。
 实现 MyStack 类：
 void push(int x) 将元素 x 压入栈顶。
 int pop() 移除并返回栈顶元素。
@@ -30,8 +30,9 @@ myStack.empty(); // 返回 False
 1 <= x <= 9
 最多调用100 次 push、pop、top 和 empty
 每次调用 pop 和 top 都保证栈不为空
-
 进阶：你能否仅用一个队列来实现栈。
+
+链接： https://leetcode.cn/problems/implement-stack-using-queues/description/
  */
 #include <queue>
 using namespace std;
