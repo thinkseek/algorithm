@@ -35,6 +35,7 @@ myStack.empty(); // 返回 False
 链接： https://leetcode.cn/problems/implement-stack-using-queues/description/
  */
 #include <queue>
+#include <iostream>
 using namespace std;
 
 class MyStack {
@@ -88,3 +89,30 @@ public:
         return q2.empty();
     }
 };
+
+
+/** ************************** **/
+// 用例测试
+// 测试用例 g++ -std=c++11 DoMyStack.cpp -o DoMyStack
+int main() {
+//    示例：
+//
+//    输入：
+//    ["MyStack", "push", "push", "top", "pop", "empty"]
+//    [[], [1], [2], [], [], []]
+//    输出：
+//    [null, null, null, 2, 2, false]
+
+    // New一个Stack实例
+    MyStack *stack = new MyStack();
+    stack->push(1);
+    stack->push(2);
+    int top = stack->top(); // 2
+    cout << top << endl;
+    int pop1 = stack->pop(); // 2
+    cout << pop1 << endl;
+
+    bool pop2 = stack->empty(); // 0
+    cout << pop2 << endl;
+    return 0;
+}

@@ -32,7 +32,7 @@ s 仅由括号 '()[]{}' 组成
 #include <string>
 #include <stack>
 #include <unordered_map>
-
+#include <iostream>
 using namespace std;
 
 class DoEffectiveBracketSolution {
@@ -65,3 +65,24 @@ public:
         return stk.empty(); // 空即为有效字符串，否则则是非法字符串
     }
 };
+
+
+/** ************************** **/
+// 测试用例 g++ -std=c++11 DoEffectiveBracketSolution.cpp -o DoEffectiveBracketSolution
+int main()
+{
+    DoEffectiveBracketSolution solution;
+    string s1 = "()";
+    string s2 = "()[]{}";
+    string s3 = "(]";
+    string s4 = "([])";
+    bool ret = solution.isValid(s1);
+    cout <<"s1 is " << ret << endl;
+    ret = solution.isValid(s2);
+    cout <<"s2 is " << ret << endl;
+    ret = solution.isValid(s3);
+    cout <<"s3 is " << ret << endl;
+    ret = solution.isValid(s4);
+    cout <<"s4 is " << ret << endl;
+    return 0;
+}

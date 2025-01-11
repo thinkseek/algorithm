@@ -20,16 +20,15 @@
 l1 和 l2 均按 非递减顺序 排列
 链接： https://leetcode.cn/problems/merge-two-sorted-lists/description/?envType=problem-list-v2&envId=linked-list
 */
+#include <iostream>
 
-
-// std11+ 可以直接通过std::list使用链表特性；提交题目需要自定义
-// 定义一个单链表节点 data,next
+// 单链表节点定义
 struct ListNode {
     // 数据结构
     int val;
     ListNode *next;
 
-    // init
+    // 构造函数
     ListNode() : val(0), next(nullptr) {}
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
@@ -61,3 +60,46 @@ public:
         return empty_node.next;
     }
 };
+
+
+/** ************************** **/
+// 用例测试
+ListNode* createList(std::initializer_list<int> elements);
+void printList(ListNode* head);
+
+// 测试用例 g++ -std=c++11 DoMergeTwoListsSolution.cpp -o DoMergeTwoListsSolution
+int main()
+{
+    // 创建两个有序链表
+    ListNode* l1 = createList({1, 2, 4});
+    ListNode* l2 = createList({1, 3, 4});
+
+    // 合并链表  1 1 2 3 4 4
+//    printList(l1);
+//    printList(l2);
+    DoMergeTwoListsSolution solution;
+    ListNode* head = solution.mergeTwoLists(l1, l2);
+    printList(head);
+    return 0;
+}
+
+// 打印合并后的链表
+void printList(ListNode* head) {
+    while (head != nullptr) {
+        std::cout << head->val << " ";
+        head = head->next;
+    }
+    std::cout << std::endl;
+}
+
+ListNode* createList(std::initializer_list<int> elements) {
+    ListNode* dummy = new ListNode(0);
+    ListNode* current = dummy;
+    for (int val : elements) {
+        current->next = new ListNode(val);
+        current = current->next;
+    }
+    ListNode* head = dummy->next;
+    delete dummy;
+    return head;
+}

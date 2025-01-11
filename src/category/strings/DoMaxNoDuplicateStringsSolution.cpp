@@ -26,8 +26,13 @@ s 由英文字母、数字、符号和空格组成
 */
 #include <string>
 #include <unordered_set>
+#include <iostream>
 using namespace std;
-#include "DoMaxNoDuplicateStringsSolution.h"
+
+class DoMaxNoDuplicateStringsSolution { ;
+public:
+    int lengthOfLongestSubstring(std::string input);
+};
 
 // 实现
 // 使用滑动窗口（Sliding Window）技术，来实现这一功能
@@ -68,4 +73,23 @@ int DoMaxNoDuplicateStringsSolution::lengthOfLongestSubstring(std::string input)
 
     cout << "字符串长度：" << max_length << " 字符串：" << max_substr << endl;
     return max_length;
+}
+
+
+/** ************************** **/
+// 用例测试 g++ -std=c++11 DoMaxNoDuplicateStringsSolution.cpp -o DoMaxNoDuplicateStringsSolution
+int main(){
+    DoMaxNoDuplicateStringsSolution noduplicate;
+
+    // 测试数据
+    std::string input1 = "abcabcbb";
+    std::cout << noduplicate.lengthOfLongestSubstring(input1) << std::endl;
+
+    std::string input2 = "bbbbb";
+    std::cout << noduplicate.lengthOfLongestSubstring(input2) << std::endl;
+
+    std::string input3 = "pwwkew";
+    std::cout << noduplicate.lengthOfLongestSubstring(input3) << std::endl;
+
+    return 0;
 }

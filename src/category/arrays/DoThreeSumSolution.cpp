@@ -31,6 +31,7 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 */
 #include <vector>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
 class DoThreeSumSolution {
@@ -84,3 +85,36 @@ public:
         return expect_nums;
     }
 };
+
+
+/** ************************** **/
+// 测试用例 g++ -std=c++11 DoThreeSumSolution.cpp -o DoThreeSumSolution
+int main()
+{
+    // 测试数据
+    vector<int> nums = {-1,0,1,2,-1,-4};
+//    vector<int> nums = {0,1,1};
+//    vector<int> nums = {0,0,0};
+
+    // New Instance
+    DoThreeSumSolution ts;
+    vector<vector<int>> ret = ts.threeSum(nums);
+    cout << '[';
+    for (int i = 0; i < ret.size(); ++i) {
+        // 遍历每个符合要求的结果
+        cout << '[';
+        vector<int> sub_vector = ret[i];
+        for (int k = 0; k < sub_vector.size(); ++k) {
+            cout << sub_vector[k];
+            if(k != sub_vector.size() - 1) {
+                cout << ",";
+            }
+        }
+        cout << ']';
+        if(i != ret.size() - 1) {
+            cout << ",";
+        }
+    }
+    cout << ']' << endl;
+    return 0;
+}

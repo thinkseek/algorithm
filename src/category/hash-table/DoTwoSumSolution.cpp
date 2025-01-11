@@ -68,3 +68,26 @@ public:
         return vc;
     }
 };
+
+
+/** ************************** **/
+// 测试用例 g++ -std=c++11 DoTwoSumSolution.cpp -o DoTwoSumSolution
+int main()
+{
+    // 测试数据
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+
+    // New Instance
+    DoTwoSumSolution ts;
+    vector<int> ret = ts.twoSum(nums, target);
+    cout << '[';
+    for (int i = 0; i < ret.size(); ++i) {
+        cout << ret[i];
+        if(i != ret.size() - 1) {
+            cout << ",";
+        }
+    }
+    cout << ']' << endl;
+    return 0;
+}

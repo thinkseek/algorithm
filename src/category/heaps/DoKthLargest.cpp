@@ -42,6 +42,7 @@ kthLargest.add(9); // 返回 8
 链接： https://leetcode.cn/problems/kth-largest-element-in-a-stream/description/?envType=problem-list-v2&envId=heap-priority-queue
 */
 
+#include <iostream>
 #include <vector>
 #include <queue>
 #include <functional>
@@ -88,3 +89,20 @@ public:
 // 在 std::priority_queue 的上下文中，std::greater<T> 被用作比较函数对象，以定义一个最小堆。默认情况下，std::priority_queue 是一个最大堆，即堆顶元素是优先级最高的元素（对于内置类型，通常是值最大的元素）。但是，如果你将 std::greater<T> 作为第三个模板参数传递给 std::priority_queue，那么它就会变成一个最小堆，堆顶元素将是优先级最低的元素（对于内置类型，通常是值最小的元素）。
 // 创建一个最小堆的优先队列
 // std::priority_queue<int, std::vector<int>, std::greater<int>> pq;
+
+
+/** ************************** **/
+// 测试用例 g++ -std=c++11 DoKthLargest.cpp -o DoKthLargest
+int main() {
+    int k = 3;
+    vector<int> numVector = {4, 5, 8, 2};
+    vector<int>& nums = numVector;
+    KthLargest *kth = new KthLargest(k, nums);
+
+    cout << "top3 num val is:" << kth->add(3) << endl; // 返回 4
+    cout << "top3 num val is:" << kth->add(5) << endl; // 返回 5
+    cout << "top3 num val is:" << kth->add(10) << endl; // 返回 5
+    cout << "top3 num val is:" << kth->add(9) << endl; // 返回 8
+    cout << "top3 num val is:" << kth->add(4) << endl; // 返回 8
+    return 0;
+}
