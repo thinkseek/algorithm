@@ -20,7 +20,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # trees
 #set(yg_algorithm src/category/trees/DoTreeInorderTraversalSolution.cpp)
 # graphs
-set(yg_algorithm src/category/graphs/DoFindValidPathSolution.cpp)
+#set(yg_algorithm src/category/graphs/DoFindValidPathSolution.cpp)
+# algorithm/findx
+set(yg_algorithm src/category/algorithm/findx/DoBinarySearchSolution.cpp)
+# algorithm/sortx
+#set(yg_algorithm src/category/algorithm/sortx/DoMergeTwoArraySolution.cpp)
 
 # 产出
 add_executable(yg_algorithm ${yg_algorithm})
