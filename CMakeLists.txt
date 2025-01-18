@@ -22,9 +22,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # graphs
 #set(yg_algorithm src/category/graphs/DoFindValidPathSolution.cpp)
 # algorithm/findx
-set(yg_algorithm src/category/algorithm/findx/DoBinarySearchSolution.cpp)
+#set(yg_algorithm src/category/algorithm/findx/DoBinarySearchSolution.cpp)
 # algorithm/sortx
 #set(yg_algorithm src/category/algorithm/sortx/DoMergeTwoArraySolution.cpp)
+# bucket-sort
+set(yg_algorithm src/category/algorithm/bucket-sort/DoBucketSortSolution.cpp)
 
 # 产出
 add_executable(yg_algorithm ${yg_algorithm})
