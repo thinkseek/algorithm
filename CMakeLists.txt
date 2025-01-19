@@ -21,12 +21,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(yg_algorithm src/category/trees/DoTreeInorderTraversalSolution.cpp)
 # graphs
 #set(yg_algorithm src/category/graphs/DoFindValidPathSolution.cpp)
-# algorithm/findx
-#set(yg_algorithm src/category/algorithm/findx/DoBinarySearchSolution.cpp)
-# algorithm/sortx
-#set(yg_algorithm src/category/algorithm/sortx/DoMergeTwoArraySolution.cpp)
-# bucket-sort
-set(yg_algorithm src/category/algorithm/bucket-sort/DoBucketSortSolution.cpp)
+# algorithms/binary-search
+#set(yg_algorithm src/category/algorithms/binary-search/DoBinarySearchSolution.cpp)
+# algorithms/sorting
+#set(yg_algorithm src/category/algorithms/sorting/DoMergeTwoArraySolution.cpp)
+# algorithms/bucket-sort
+#set(yg_algorithm src/category/algorithms/bucket-sort/DoBucketSortSolution.cpp)
+# algorithms/counting-sort
+set(yg_algorithm src/category/algorithms/counting-sort/DoCountingSortSolution.cpp)
 
 # 产出
 add_executable(yg_algorithm ${yg_algorithm})
