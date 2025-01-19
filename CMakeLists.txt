@@ -28,7 +28,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # algorithms/bucket-sort
 #set(yg_algorithm src/category/algorithms/bucket-sort/DoBucketSortSolution.cpp)
 # algorithms/counting-sort
-set(yg_algorithm src/category/algorithms/counting-sort/DoCountingSortSolution.cpp)
+#set(yg_algorithm src/category/algorithms/counting-sort/DoCountingSortSolution.cpp)
+# algorithms/math
+set(yg_algorithm src/category/algorithms/math/DoPalindromeNumberSolution.cpp)
 
 # 产出
 add_executable(yg_algorithm ${yg_algorithm})
