@@ -101,6 +101,7 @@ public:
 };
 
 
+// 测试用例 g++ -std=c++11 DoLongestCommonPrefixSolution.cpp -o DoLongestCommonPrefixSolution
 int main() {
     vector<string> strs = {"flower", "flow", "flight"};
     DoLongestCommonPrefixSolution lcp;
